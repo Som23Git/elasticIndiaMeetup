@@ -1,0 +1,19 @@
+# Runtime Environment
+Node.js==24.12.0
+npm==11.6.2
+
+# Application Dependencies (production only)
+express==4.22.1
+
+# Verification Sources
+# - npm ls --omit=dev
+# - npm audit --omit=dev (0 vulnerabilities)
+# - package.json
+# - package-lock.json (used via npm ci)
+
+# Notes
+# - No devDependencies are used
+# - No database dependencies (in-memory only)
+# - No frontend/UI dependencies(not yet implemented)
+# - No ELK stack dependencies inside this service
+# - Dependency versions are pinned via package-lock.json
