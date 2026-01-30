@@ -1,0 +1,9 @@
+# Traffic Generator Service - Requirements
+
+# Runtime Environment
+Node.js >= 18.x
+npm >= 9.x
+
+# Application Dependencies (production only)
+express== ^4.19.2
+axios== ^1.13.4
