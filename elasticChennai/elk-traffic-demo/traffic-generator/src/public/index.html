@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Traffic Generator Control</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                background: #0f172a;
+                color: #e5e7eb;
+                padding: 30px;
+            }
+            h1 {
+                margin-bottom: 10px;
+            }
+            button {
+                margin: 6px 0;
+                padding: 10px 14px;
+                font-size: 14px;
+                cursor: pointer;
+            }
+            select,
+            input {
+                padding: 6px;
+                margin: 4px 0;
+                width: 200px;
+            }
+            .status {
+                margin-top: 15px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>🚦 Traffic Generator</h1>
+        <p>Control traffic for ELK demo</p>
+
+        <label>Pattern</label><br />
+        <select id="pattern">
+            <option value="steady">Steady</option>
+            <option value="burst">Burst</option>
+            <option value="chaos">Chaos</option></select
+        ><br />
+
+        <label>RPS</label><br />
+        <input id="rps" type="number" value="5" /><br />
+
+        <label>Duration (seconds)</label><br />
+        <input id="duration" type="number" value="30" /><br /><br />
+
+        <button onclick="start()">▶ Start Traffic</button>
+        <button onclick="stop()">⏹ Stop Traffic</button>
+
+        <div class="status" id="status">Status: unknown</div>
+
+        <script>
+            const BASE_URL = "http://demo-ecommerce:3000";
+
+            async function start() {
+                const payload = {
+                    pattern: document.getElementById("pattern").value,
+                    rps: Number(document.getElementById("rps").value),
+                    duration: Number(document.getElementById("duration").value),
+                    baseUrl: BASE_URL,
+                    endpoints: [
+                        { path: "/products" },
+                        { path: "/products/1" },
+                        { path: "/health" },
+                    ],
+                };
+
+                await fetch("/traffic/start", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload),
+                });
+
+                refreshStatus();
+            }
+
+            async function stop() {
+                await fetch("/traffic/stop", { method: "POST" });
+                refreshStatus();
+            }
+
+            async function refreshStatus() {
+                const res = await fetch("/traffic/status");
+                const data = await res.json();
+                document.getElementById("status").innerText =
+                    "Status: " + (data.running ? "RUNNING 🔥" : "STOPPED");
+            }
+
+            setInterval(refreshStatus, 2000);
+            refreshStatus();
+        </script>
+    </body>
+</html>
