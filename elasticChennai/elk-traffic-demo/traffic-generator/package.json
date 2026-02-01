@@ -1,0 +1,16 @@
+{
+  "name": "traffic-generator",
+  "version": "1.0.0",
+  "description": "Traffic generator microservice for ELK observability demos",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "axios": "^1.13.4",
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
