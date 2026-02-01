@@ -1,0 +1,8 @@
+# Inside locust-sidekick/.gitignore
+.venv/
+__pycache__/
+*.pyc
+
+# DO NOT ignore these: please then ur config will not be decalrative
+# pyproject.toml
+# uv.lock
