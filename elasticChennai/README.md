@@ -1,5 +1,18 @@
 # Elastic Workshop: Machine Learning, AI Ops, and ESQL
 
+## 🎤 Meet Our Speakers
+
+We're excited to have an amazing lineup of speakers who will guide you through this comprehensive workshop:
+
+- 🔎 **Introduction to Elasticsearch** – by [Someshwaran M](https://www.linkedin.com/in/somdevsupport/)
+- 🤖 **Dive into Machine Learning in Elastic** – by [Kishore Kumar](https://www.linkedin.com/in/kishore-loga/?lipi=urn%3Ali%3Apage%3Ad_flagship3_detail_base%3Br1p5GfpSSc2R%2BIR3fs4nPg%3D%3D)
+- ⚙️ **ML On Demand with AIOps Labs** – by [Aravind Sathyajith](https://www.linkedin.com/in/sathyajith98/?lipi=urn%3Ali%3Apage%3Ad_flagship3_detail_base%3Br1p5GfpSSc2R%2BIR3fs4nPg%3D%3D)
+- 🧠 **Elastic AI Assistant with RAG** – by [Aakash](https://www.linkedin.com/in/aakash-dhakshnamoorthy-6909991ab/?lipi=urn%3Ali%3Apage%3Ad_flagship3_detail_base%3Br1p5GfpSSc2R%2BIR3fs4nPg%3D%3D) & [Harish](https://www.linkedin.com/in/harish-h2h/?lipi=urn%3Ali%3Apage%3Ad_flagship3_detail_base%3Br1p5GfpSSc2R%2BIR3fs4nPg%3D%3D)
+- 📊 **Have Fun with ES|QL** – by [Shane Cardoz](https://www.linkedin.com/in/shane-cardoz-m/?lipi=urn%3Ali%3Apage%3Ad_flagship3_detail_base%3Br1p5GfpSSc2R%2BIR3fs4nPg%3D%3D)
+- 🚨 **From Discover to Alerting** – by [Navin Balaji](https://www.linkedin.com/in/navinbalaji/?lipi=urn%3Ali%3Apage%3Ad_flagship3_detail_base%3Br1p5GfpSSc2R%2BIR3fs4nPg%3D%3D)
+
+---
+
 > **Get Started with Elastic**
 > 
 > Elasticsearch has native integrations to industry leading Gen AI tools and providers. Check out our webinars on [going Beyond RAG Basics](https://www.elastic.co/webinars), or [building prod-ready apps with Elastic Vector Database](https://www.elastic.co/vector-database).
